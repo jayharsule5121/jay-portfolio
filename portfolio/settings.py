@@ -27,9 +27,9 @@ DEBUG = True
 
 
 ALLOWED_HOSTS = [
-    "jayharsule-portfolio-django.onrender.com",
-    "localhost",
-    "127.0.0.1",
+    'jay-portfolio-k5dn.onrender.com',
+    'localhost',
+    '127.0.0.1'
 ]
 # Application definition
 
