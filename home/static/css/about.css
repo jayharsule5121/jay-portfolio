@@ -1,0 +1,171 @@
+/* ===========================
+ABOUT SECTION
+=========================== */
+
+.about-section{
+    padding:120px 0;
+    position:relative;
+}
+
+
+/* About Layout */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+
+/* Profile Image */
+
+.profile-circle{
+    width:350px;
+    height:350px;
+    margin:auto;
+    border-radius:50%;
+    padding:8px;
+
+    background:linear-gradient(
+        135deg,
+        #10b981,
+        #f59e0b
+    );
+
+    box-shadow:
+    0 0 45px rgba(16,185,129,.35);
+}
+
+
+.profile-circle img{
+
+    width:100%;
+    height:100%;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:4px solid #111827;
+
+    transition:.5s;
+
+}
+
+
+.profile-circle img:hover{
+
+    transform:scale(1.08);
+
+}
+
+
+/* Heading */
+
+.about-content h2{
+
+    font-size:50px;
+
+    margin-bottom:15px;
+
+    color:#f9fafb;
+
+}
+
+
+.about-content h2 span{
+
+    color:#10b981;
+
+}
+
+
+/* Underline */
+
+.line{
+
+    width:90px;
+
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        #10b981,
+        #f59e0b
+    );
+
+    border-radius:20px;
+
+    margin-bottom:30px;
+
+}
+
+
+/* Paragraph */
+
+.about-content p{
+
+    color:#d1d5db;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+    margin-bottom:25px;
+
+}
+
+
+/* Info Boxes */
+
+.about-boxes{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+
+.glass-box{
+
+    background:
+    rgba(16,185,129,0.08);
+
+
+    backdrop-filter:blur(20px);
+
+
+    border:1px solid
+    rgba(16,185,129,0.25);
+
+
+    padding:15px 25px;
+
+
+    border-radius:15px;
+
+
+    color:#f9fafb;
+
+
+    transition:.4s;
+
+}
+
+
+.glass-box:hover{
+
+    transform:translateY(-8px);
+
+
+    box-shadow:
+    0 0 30px rgba(16,185,129,.35);
+
+
+    border-color:#10b981;
+
+}

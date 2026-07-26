@@ -1,0 +1,122 @@
+<section id="contact" class="contact-section">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <h2>Get In <span>Touch</span></h2>
+
+        <div class="line"></div>
+
+        <p>
+            I'm always open to Python Developer, Backend Developer,
+            Django Developer, Full Stack Developer, and Internship
+            opportunities. Feel free to connect with me for projects,
+            collaborations, or full-time roles.
+        </p>
+
+    </div>
+
+    <div class="contact-grid">
+
+        <!-- Contact Form -->
+        <div>
+
+            <form method="POST">
+
+                {% csrf_token %}
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    required>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required>
+
+                <textarea
+                    name="message"
+                    rows="7"
+                    placeholder="Your Message"
+                    required></textarea>
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- Contact Details -->
+        <div class="contact-info">
+
+            <h3>Let's Connect</h3>
+
+            <p>
+                Python Full Stack Developer with hands-on experience in
+                Django, FastAPI, Flask, REST APIs, React.js, MySQL,
+                PostgreSQL, MongoDB, AI & Machine Learning.
+                I'm passionate about building scalable backend applications
+                and solving real-world problems through technology.
+            </p>
+
+            <div class="info-box">
+
+                <strong>Email</strong>
+
+                <p>jayharsule5121@gmail.com</p>
+
+            </div>
+
+            <div class="info-box">
+
+                <strong>Phone</strong>
+
+                <p>+91 8329791451</p>
+
+            </div>
+
+            <div class="info-box">
+
+                <strong>Location</strong>
+
+                <p>Amravati, Maharashtra, India</p>
+
+            </div>
+
+            <div class="social">
+
+                <a href="https://github.com/jayharsule5121"
+                   target="_blank">
+
+                    <i class="fab fa-github"></i>
+
+                </a>
+
+                <a href="https://www.linkedin.com/in/jay-harsule-24a113240"
+                   target="_blank">
+
+                    <i class="fab fa-linkedin-in"></i>
+
+                </a>
+
+            </div>
+
+            {% if success %}
+            <div class="alert alert-success mt-3">
+                ✅ Thank you! Your message has been sent successfully.
+            </div>
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
