@@ -138,7 +138,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'jayharsule5121@gmail.com'
-EMAIL_HOST_PASSWORD = 'zkiq kxav twmh nmck'
+EMAIL_HOST_PASSWORD = 'qcii fcln areh efyl'
 
 
 STATIC_URL = '/static/'
