@@ -55,7 +55,7 @@ Python Developer
             """,
             from_email=settings.EMAIL_HOST_USER,
             recipient_list=[email],   # <-- User cha email
-            fail_silently=False,
+            fail_silently=True,
         )
 
         return redirect("/")
