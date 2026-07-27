@@ -3,6 +3,7 @@ from django.core.mail import send_mail
 from django.conf import settings
 from .models import Contact
 
+
 def index(request):
 
     if request.method == "POST":
@@ -18,12 +19,11 @@ def index(request):
             message=message
         )
 
-        # ----------------------------
         # Mail to YOU
-        # ----------------------------
-        send_mail(
-            subject="New Contact Form Submission",
-            message=f"""
+        try:
+            send_mail(
+                subject="New Contact Form Submission",
+                message=f"""
 New message received from Portfolio
 
 Name : {name}
@@ -31,18 +31,20 @@ Email : {email}
 
 Message:
 {message}
-            """,
-            from_email=settings.EMAIL_HOST_USER,
-            recipient_list=["jayharsule5121@gmail.com"],   # <-- Tumcha email
-            fail_silently=False,
-        )
+                """,
+                from_email=settings.EMAIL_HOST_USER,
+                recipient_list=["jayharsule5121@gmail.com"],
+                fail_silently=True,
+            )
+        except Exception as e:
+            print("Mail Error:", e)
 
-        # ----------------------------
+
         # Auto Reply to USER
-        # ----------------------------
-        send_mail(
-            subject="Thank You for Contacting Me",
-            message=f"""
+        try:
+            send_mail(
+                subject="Thank You for Contacting Me",
+                message=f"""
 Hi {name},
 
 Thank you for contacting me.
@@ -52,11 +54,14 @@ I have received your message and will get back to you soon.
 Regards,
 Jay Harsule
 Python Developer
-            """,
-            from_email=settings.EMAIL_HOST_USER,
-            recipient_list=[email],   # <-- User cha email
-            fail_silently=True,
-        )
+                """,
+                from_email=settings.EMAIL_HOST_USER,
+                recipient_list=[email],
+                fail_silently=True,
+            )
+        except Exception as e:
+            print("Auto Reply Error:", e)
+
 
         return redirect("/")
 
